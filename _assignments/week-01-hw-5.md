@@ -8,7 +8,11 @@ horizontal and vertical lines to divide the window into an evenly
 spaced grid.  Your program should rely on a variable `n` such that
 each the grid is made up of _n_ vertical and _n_ horizontal rectangles.
  For example, if `n=3`, your program should draw four lines to divide
- the window into nine squares like this.
+ the window into nine squares like this.  Try your program with a few
+ different values of `n`.  
+ 
+ **Note**: The project starter will save images of each
+ grid you produce. Please include those images in your submission.
 
  {::nomarkdown}
 <svg width="600" height=400>
