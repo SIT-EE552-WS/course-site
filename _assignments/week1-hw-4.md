@@ -1,5 +1,5 @@
 ---
-name: Looping Sums
+title: Looping Sums
 week: 1
 homework: 4
 ---

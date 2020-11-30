@@ -1,5 +1,5 @@
 ---
-name: Traveling Circles
+title: Traveling Circles
 week: 1
 homework: 3
 ---

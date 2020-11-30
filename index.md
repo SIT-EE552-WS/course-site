@@ -7,11 +7,12 @@ layout: post
 <div class="wrapper">
 {% for assignment in site.assignments %}
   <article class="post h-entry">
-  <h2>Week {{assignment.week}} - HW {{assignment.homework}} - {{ assignment.name }}</h2>
+  <h2><a href="{{ assignment.url }}"> Homework {{assignment.week}}.{{assignment.homework}} - {{ assignment.title }}</a></h2>
   <p>{{ assignment.content | markdownify }}</p>
   </article>
 {% endfor %}
 </div>
 </main>
+
 <link rel="stylesheet" href="/assets/main.css">
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

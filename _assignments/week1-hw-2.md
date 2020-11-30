@@ -1,5 +1,5 @@
 ---
-name: Counting with Loops
+title: Counting with Loops
 week: 1
 homework: 2
 ---

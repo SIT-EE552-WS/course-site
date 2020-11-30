@@ -1,5 +1,5 @@
 ---
-name: Drawing Grids
+title: Drawing Grids
 week: 1
 homework: 5
 ---
