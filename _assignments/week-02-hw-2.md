@@ -1,5 +1,5 @@
 ---
-title: TBD
+title: Graphing Functions
 week: 2
 homework: 2
 ---
@@ -10,5 +10,5 @@ Using a window size of 400x400, graph the following functions.  Remember that in
 
 1. $$ y = \frac{1}{2} x + 40 $$
 2. $$ y = x^2 $$
-3. $$ y = 100 \sin(\frac{x}/10) $$
+3. $$ y = 100 \sin(\frac{x}{10}) $$
 4. Choose your own function and graph it.
