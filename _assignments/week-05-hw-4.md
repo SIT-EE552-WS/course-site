@@ -19,16 +19,16 @@ Thinking back to geometry and linear algebra, a normalized vector quantity repre
 if the angle between the vectors is very small (If the angle is 0 degrees, they are equal, if the angle is 180 degrees they are exact opposites).
 It is possible to determine the angle between two vectors by using the Euclidean dot product formula.
  
-$$ A \cdot B = ||A|| ||B|| \cos(\theta)$$
+\\[ A \cdot B = \left\|\|A\right\|\| \left\|\|B\right\|\| \cos(\theta) \\]
  
 Therefore,
  
-$$ \cos(\theta)  = \frac{||A|| ||B||}{A \cdot B }$$
+\\[ \cos(\theta)  = \frac{\left\|\|A\right\|\| \left\|\|B\right\|\|}{A \cdot B } \\]
  
 We don't really need the angle - using the cosine of the angle is good enough.  A value of 1 means the two vectors are identical.  
 A value of -1 means the vectors could not be more different.
 
-**Write a method to calculate the cosime similarity of two vectors **
+**Write a method to calculate the cosime similarity of two vectors**
 
 ## Part 1: Term Frequency Vectors ##
 
@@ -103,7 +103,7 @@ for a book on your shelf, your first thought probably isn't "It has white pages"
 find all the sentences in this homework that contain the word "the", you might as well just look at every sentence.  
 The Inverse Document Frequency is a statistical measure used to represent how important or unique a word is. The formula is:
 
-$$ IDF(t) = \log \frac{N}{df_t} $$
+\\[ IDF(t) = \log \frac{N}{df_t} \\]
 
 Where $$N$$ is the total number of documents and $$df_t$$ is the number of documents that contain the term $$t$$.  Note that
 for our purposes, a "document" is actually a sentence.  

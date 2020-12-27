@@ -8,4 +8,4 @@ The Sierpiński triangle is a famous fractal that can be constructed by recursiv
 
 The end result will look something like this.
 
-![Triangle](/assets/sierpinksi.png)
+![Triangle](/assets/img/sierpinski.png)
