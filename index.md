@@ -4,6 +4,25 @@
 layout: post
 ---
 <main class="page-content" aria-label="Content">
+<h2>Table of Contents</h2>
+<table>
+<thead>
+<tr>
+<th>Week</th>
+<th>Assigment</th>
+<th>Title</th>
+</tr>
+</thead>
+<tbody>
+{% for assignment in site.assignments %}
+<tr>
+<td>{{assignment.week}}</td>
+<td>{{assignment.homework}}</td>
+<td><a href="{{assignment.url}}">{{assignment.title}}</a></td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
 <div class="wrapper">
 {% for assignment in site.assignments %}
   <article class="post h-entry">
