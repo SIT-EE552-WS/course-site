@@ -4,11 +4,11 @@ week: 6
 homework: 3
 ---
 
-A point in 3D space can be represented by Cateesian coordinates (x,y,z).  The same point can also be specified in Cylindrical coordinates (r,θ,z). You 
+A point in 3D space can be represented by Cartesian coordinates (x,y,z).  The same point can also be specified in Cylindrical coordinates (r,θ,z). You 
 can check if two points in Cartesian space are equal by checking that each component matches.  You can do the same for two points in Cylindrical 
 coordinates.  In order to compare a point in Cartesian coordinates to a point in Cylindrical coordinates, you will need to do some conversion.
 
-In the starter project, three classes are defined `abstract 3DPoint` and two subclasses `CartesianPoint` and `CylindricalPoint`.  Implement `equals` 
+In the starter project, three classes are defined `abstract Point3D` and two subclasses `CartesianPoint` and `CylindricalPoint`.  Implement `equals` 
 and `hashCode` in both subclasses so that it is possible to test equality of points in both systems against each other.  The equations for converting 
 between Cartesian and Cylindrical coordinates are:
 

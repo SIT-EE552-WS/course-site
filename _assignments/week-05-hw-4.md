@@ -23,14 +23,13 @@ It is possible to determine the angle between two vectors by using the Euclidean
  
 Therefore,
  
-\\[ \cos(\theta)  = \frac{\left\|\|A\right\|\| \left\|\|B\right\|\|}{A \cdot B } \\]
+\\[ \cos(\theta)  = \frac{A \cdot B } {\left\|\|A\right\|\| \left\|\|B\right\|\|}\\]
  
-We don't really need the angle - using the cosine of the angle is good enough.  A value of 1 means the two vectors are identical.  
-A value of -1 means the vectors could not be more different.
+We don't really need the angle - using the cosine of the angle is good enough.  A value of 1 means the two vectors are identical.  A value of -1 means the vectors could not be more different.
 
 **Write a method to calculate the cosime similarity of two vectors**
 
-## Part 1: Term Frequency Vectors ##
+## Part 2: Term Frequency Vectors ##
 
 In homework 5.3, we constructed a Bag of Words (BoW) from a text package. Bag of Words representations
 are used for many applications in natural language processing (NLP).  We can take the BoW
@@ -59,9 +58,10 @@ jane    2
 spot    1
 see     1
 run     1
+to      1
 ```
 
-We can make that a vector `[1/6, 1/6, 2/6, 1/6, 1/6, 1/6] = [0.16666..., 0.16666..., 0.33333..., 0.16666..., 0.16666..., 0.16666...]`, 
+We can make that a vector `[1/7, 1/7, 2/7, 1/7, 1/7, 1/7, 1/7]`, 
 but we can't do any operations on the pair vectors because they have different legnths. (Even if the vectors 
 were the same length, we really couldn't do any meaningful operations on the vectors because the elements 
 map to different words.  In the frist vector, the frequency of the word `spot` is represented by the third 
@@ -74,7 +74,7 @@ not the other:
 ------------------
 this    1     1
 is      1     1
-jane    0     3
+jane    0     2
 spot    3     1
 see     1     1
 run     3     1
@@ -85,12 +85,13 @@ Or with normalizing (each sentence is still normalized using only the number of 
 ```
         s1      s2
 --------------------------
-this    0.2     0.16666...
-is      0.2     0.16666...
-jane    0.0     0.33333...
-spot    0.6     0.16666...
-see     0.2     0.16666...
-run     0.6     0.16666...
+this    0.2     0.14285...
+is      0.2     0.14285...
+jane    0.0     0.28571...
+spot    0.6     0.14285...
+see     0.2     0.14285...
+run     0.6     0.14285...
+to      0.0     0.14285...       
 ```
 
 **Given a list of sentences, create the normalized term frequency vectors for 
@@ -123,15 +124,15 @@ run     0.0
 
 "Jane" is the only word with a positive value, because it is the only word that is in one sentence but not the other.
 
-**The second part of the assignment is, given a list of sentences, create the IDF vector for the combined list of words in each sentence.**
+**The third part of the assignment is, given a list of sentences, create the IDF vector for the combined list of words in each sentence.**
 
 ## Part 4 - Text Summarization ##
 
 We're all busy.  Who has time to read anymore?  Imagine if you could take a long article and automatically identify only the most 
-important sentences in the article.  While there are certainly ways to create something a bit, we are going to make a simple summarizer
+important sentences in the article.  While there are certainly ways to create something a bit like that. We are going to make a simple summarizer
 by combining the work we did in Parts 1,  2, and 3.
 
-A term frequency–inverse document frequency (TF-IDF) vector is made by multiplying (dot product) the TF vector from Part 1 
+A term frequency–inverse document frequency (TF-IDF) vector is made by multiplying (Hadamard / element-wise product) the TF vector from Part 1 
 with the IDF vector in Part 2.  This is another metric on how important each word is to the source text.  
 A rare word (high IDF) that appears multiple times (high TF) is more important than a common word (low IDF) that appears few times (low TF).  
 By feeding two TF-IDF vectors into the Cosine Similarity function from Part 1, we can generate a scalar value representing how similar the 
@@ -142,7 +143,8 @@ that have the most overlap with other sentences in the article.
 
 **For each sentence in the longer text, calculate the TF-IDF vector for the sentence and then calculate the cosine 
 similarity between that sentence's vector and every other sentence's vector.  Finally, select the sentences that 
-have the highest average similarity measure and output them in the proper order to a file called `summary.txt`.  
-Some helper methods are already provided in the project scaffold.**
+have the highest average similarity measure.**
 
- *One more note:* English is a messy language.  In the project folder are two files `original.txt` and `clean.txt`
+ *One more note:* English is a messy language.  In the sample text, I spent some time cleaning it by manually
+breaking up each sentence into lines.  I also added a pre-process step that you don't need to implement that filters
+out certain extremely common words before any of your processing code will run.
