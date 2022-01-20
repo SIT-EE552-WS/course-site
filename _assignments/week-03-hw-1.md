@@ -34,7 +34,7 @@ getTweenPosition (time, begin, change, duration) {
 Because they all have this same form, we can model them as simple objects and rely on polymorphism 
 to use them.  In the starter project provided with this assignment, three of the easing functions have 
 been implemented as classes.  Your task is to implement 7 other functions of your choice.  Try to name your 
-classes intuitively.  The full list of equations can be found here: https://gist.github.com/aelfric/cf4ff52ba7eacc014278347da8c008be
+classes intuitively.  The full list of equations can be found <a href="https://gist.github.com/aelfric/cf4ff52ba7eacc014278347da8c008be">here</a>.
 
 To make it easier to visualize the easing functions, the first three have been rendered as a monochrome gradient with 
 three equal vertical stripes, one for each easing function.  Create an gradient like this with 10 equal stripes, one for each easing function.
